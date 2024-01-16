@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-primary: #231F20;
+    --text-secondary: #717FA6;
+    --btn-primary: #382AE1;
+    --link-primary: #382AE1;
+    --bg-wave: #D6E1FF;
+    --bg-main: #E0E8FF;
+    --bg-card: #ffffff;
+    --hover-state: #766CF1;
+}
+
+body {
+    font-size: 16px;
+    background-color: var(--bg-main);
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: no-repeat top left/100% url('./images/pattern-background-mobile.svg');
+
+}
+
+.order-summary {
+    max-width: 20.44rem;
+    background-color: var(--bg-card);
+    border-radius: 1rem;
+}
+
+#image-header {
+    height: 30%;
+}
+
+#image-header img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+#order-plan {
+    text-align: center;
+    padding: 0 1.6rem;
+
+}
+
+#order-plan h1 {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+#order-plan .tag-line {
+    font-size: .95rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.plan-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.5rem 0;
+}
+
+.plan-info img {
+    width: 48px;
+    height: 48px;
+}
+
+.plan-info a {
+    color: var(--link-primary);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.plan-info a:hover {
+    color: var(--hover-state);
+    text-decoration: none;
+
+}
+
+.cost p:first-child {
+    font-weight: 700;
+    margin-bottom: .3rem;
+
+}
+
+.cost {
+    margin-right: 2rem;
+}
+
+.cost p:last-child {
+    color: var(--text-secondary);
+}
+
+
+#btn-confirm {
+    background-color: #382AE1;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: .7rem;
+    cursor: pointer;
+}
+
+#btn-confirm:hover {
+    background-color: var(--hover-state);
+    transition: .5s;
+}
+
+#btn-cancel {
+    background-color: none;
+    display: block;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: .7rem;
+    cursor: pointer;
+    margin: .5rem 0;
+}
+
+#btn-cancel:hover {
+    color: black;
+    transition: .5s;
+}
+
+
+@media (min-width: 460px) {
+    main {
+        background: no-repeat top left/100% url('./images/pattern-background-desktop.svg');
+    }
+
+    .order-summary {
+        max-width: 28.125rem;
+    }
+
+    #order-plan {
+        padding: 1.6rem 3rem;
+    }
+
+    #order-plan h1 {
+        font-size: 1.8rem;
+    }
+
+    #order-plan .tag-line {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .plan-info {
+        padding: 0 1rem;
+    }
+
+
+
+    .cost {
+        margin-right: 5rem;
+    }
+
+    #btn-confirm {
+        margin-bottom: .5rem;
+    }
+
+    #btn-cancel {
+        margin: .8rem 0;
+    }
+}
